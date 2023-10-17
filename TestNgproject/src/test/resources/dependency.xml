@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="Test1.xml">
+  <groups>
+  <dependencies>
+  <group name="smoke" depends-on="sanity" />
+  <group name="sanity" depends-on="functional" />
+  <group name="functional" depends-on="regression"/>
+    </dependencies>
+  </groups>
+    <classes>
+   <class name="DependencyTestNg.Dependongroups"/>
+  </classes>
+  </test> <!-- dependency.xml -->
+</suite> <!-- Suite -->
